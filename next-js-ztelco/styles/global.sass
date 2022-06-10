@@ -1,0 +1,83 @@
+@import settings
+@import fonts
+
+html
+  scroll-behavior: smooth
+
+*, ::before, ::after
+  box-sizing: border-box
+
+body
+  margin: 0
+  background-color: $white
+  font-family: $w
+  font-weight: 400
+  font-size: 18px
+  max-width: 100vw
+  overflow-x: hidden
+
+  h1
+    line-height: 1.2
+    font-weight: 400
+    +r(0, 575)
+      font-size: 42px
+    +r(576, 991)
+      font-size: 56px
+    +r(992)
+      font-size: 64px
+
+  h2
+    line-height: 1.2
+    font-weight: 400
+    +r(0, 575)
+      font-size: 32px
+    +r(576, 991)
+      font-size: 38px
+    +r(992)
+      font-size: 42px
+
+  h3
+    line-height: 1.2
+    font-weight: 500
+    +r(0, 991)
+      font-size: 24px
+    +r(992)
+      font-size: 28px
+
+  p
+    font-family: $q
+    font-weight: 400
+    line-height: 1.5
+    +r(0, 991)
+      font-size: 16px
+    +r(992)
+      font-size: 18px
+
+  li
+    list-style-type: none
+
+  a
+    text-decoration: none
+
+  section
+    +r(0, 575)
+      margin-top: 32px
+      margin-bottom: 32px
+    +r(556,991)
+    +r(992)
+      margin-top: 72px
+      margin-bottom: 72px
+
+  .additional
+    line-height: 1.2
+    font-weight: 500
+    +r(0, 991)
+      font-size: 14px
+    +r(992)
+      font-size: 16px
+
+  .gradient
+    background: $gr-maim
+    display: inline-block
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent

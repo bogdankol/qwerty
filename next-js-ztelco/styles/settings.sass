@@ -1,0 +1,48 @@
+//fonts
+$w: 'Work Sans', sans-serif
+$q: 'Questrial', sans-serif
+$m: 'Manrope', sans-serif
+
+//colors
+$black: #0E121B
+$white: #FFFFFF
+$grey-deep: #21293A
+$grey-dark: #373E4E
+$grey: #616875
+$grey-light: #8E939E
+$grey-vanished: #D9DFE5
+$silver: #F3F4F6
+$blue-dark: #21293A
+$blue: #00ACD8
+$blue-light: #6ED6F1
+$blue-vanished: #DBF6FD
+$orange-dark: #BF2626
+$orange: #F47C66
+$orange-light: #F9D4CD
+$orange-vanished: #FDECE8
+
+//gradient
+$gr-maim: linear-gradient(to right, #00ACD8, #F37C66)
+
+//accents
+$accent-green: #32CD9F
+$accent-green-light: #D6F5EC
+$accent-blue: #48A2F5
+$accent-blue-light: #CFE6FC
+$accent-purple: #846CFE
+$accent-purple-light: #D5CCFF
+$accent-yellow: #FBCD57
+$accent-eellow-light: #FEF0CD
+$accent-red: #F65E5E
+$accent-red-light: #FCCFCF
+
+//mixin
+@mixin r($minSize, $maxSize: false)
+
+  @if $minSize and $maxSize
+    @media only screen and (min-width: $minSize + 'px') and (max-width: $maxSize + 'px')
+      @content
+
+  @else
+    @media only screen and (min-width: $minSize + 'px')
+      @content
