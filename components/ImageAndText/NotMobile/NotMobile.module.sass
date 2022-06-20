@@ -1,0 +1,33 @@
+@import ../../../styles/settings
+
+.section
+  padding: 49px 0
+
+.list
+  display: flex
+  padding: 0
+  +r(576, 991)
+    height: 380px
+  +r(992)
+    height: 469px
+    justify-content: center
+
+.item
+  +r(576, 991)
+    margin-right: 62px
+  +r(992)
+    margin-right: 118px
+
+  &:nth-child(1)
+    +r(576, 991)
+    +r(992)
+      max-width: 476px
+
+  &:nth-child(2)
+    +r(576, 991)
+      margin-right: 0
+      max-width: 339px
+      padding: 24px 0
+    +r(992)
+      padding: 52px 0
+      margin-right: 0

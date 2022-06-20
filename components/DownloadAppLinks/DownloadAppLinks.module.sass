@@ -1,0 +1,29 @@
+@import ../../styles/settings
+
+.list
+  display: flex
+  +r(0, 575)
+    padding: 0 0 0 0
+    margin-top: 50px
+  +r(576, 991)
+    padding: 0
+    margin-top: 74px
+    justify-content: center
+    padding-left: 4px
+
+  a
+    padding: 0
+
+.item
+  +r(0, 576)
+    margin-right: 10px
+  +r(576, 991)
+    margin-right: 19px
+    width: 180px
+
+  &:nth-child(2n)
+    margin-right: 0
+
+.image
+  width: 100%
+    

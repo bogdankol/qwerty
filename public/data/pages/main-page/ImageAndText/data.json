@@ -1,0 +1,35 @@
+{
+  "icon": {
+    "src": "/images/pages/main-page/ImageAndText/arrow.svg",
+    "title": "arrow",
+    "alt": "arrow"
+  },
+  "introduceText": "Video Conferencing",
+  "header": "Connect with Video Conferencing Made Easy",
+  "imageData": {
+    "srcMobile": "/images/pages/main-page/ImageAndText/mobile-image.png",
+    "srcTablet": "/images/pages/main-page/ImageAndText/tablet-image.png",
+    "srcDesktop": "/images/pages/main-page/ImageAndText/desktop-image.png",
+
+    "title": "Connect with Video Conferencing Made Easy",
+    "alt": "Connect with Video Conferencing Made Easy"
+  },
+  "description": "Get Started with RingPlan™",
+  "text": "Connect with your team and customers face-to-face with video conferencing.",
+  "btnText": "Host Video Meetings",
+  "downloadLinks": [
+    {
+      "id": "App Store",
+      "iconSrc": "/images/pages/main-page/ImageAndText/app-store-icon.svg",
+      "iconTitle": "App Store",
+      "iconAlt": "App Store",
+      "href": "https://google.com"
+    }, {
+      "id": "Google Play",
+      "iconSrc": "/images/pages/main-page/ImageAndText/google-paly-icon.svg",
+      "iconTitle": "Google Play",
+      "iconAlt": "Google Play",
+      "href": "https://vyos.io"
+    }
+  ]
+}

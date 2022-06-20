@@ -1,0 +1,47 @@
+@import ../../styles/settings
+
+.wrapper
+
+  +r(576, 991)
+    padding-top: 0
+
+  h2
+    letter-spacing: -0.05em
+    +r(0, 575)
+      margin-top: 16px
+      margin-bottom: 20px
+    +r(576)
+      margin-top: 17px
+    +r(576, 991)
+      margin-bottom: 24px
+    +r(992)
+      margin-bottom: 26px
+
+.innerDiv
+  display: flex
+  align-items: center
+  color: $grey-light
+  +r(0, 991)
+    height: 17px
+  +r(992)
+    height: 19px
+
+  h4
+    font-weight: 500
+    letter-spacing: -0.05em
+    +r(0, 991)
+      font-size: 14px
+    +r(992)
+      font-size: 16px
+
+.img
+  +r(0, 991)
+    margin-right: 4px
+    width: 12px
+  +r(992)
+    margin-right: 8px
+    width: 18px
+
+.header
+  +r(576, 991)
+    font-size: 32px
