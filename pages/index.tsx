@@ -8,7 +8,6 @@ const Home: NextPage = () => {
   return <>
     <ImageAndText data={data} />
   </>
- // don't forget to edit components to use through props
 }
 
 export default Home

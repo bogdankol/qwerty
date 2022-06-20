@@ -1,11 +1,15 @@
 import s from './Button.module.sass'
 
-function Button({ btnText }: any) {
-  return (
-    <div>
-      <button className={s.button}>{btnText}</button>
-    </div>
-  )
+interface IButton {
+  btnText: string
+}
+
+function Button({ btnText }: IButton) {
+  return <div>
+
+    <button className={s.button}>{btnText}</button>
+    
+  </div>
 }
 
 export default Button

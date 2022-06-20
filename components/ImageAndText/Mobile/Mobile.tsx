@@ -1,10 +1,31 @@
-import IconTextWithHeader from "../../IconTextWithHeader"
+import Headline from "../../Headline"
 import DivWithImage from "../DivWithImage"
 import Description from "../Description"
 import Button from '../../Button'
 import DownloadAppLinks from "../../DownloadAppLinks"
 
 import s from './Mobile.module.sass'
+
+interface IMobile {
+  imageSrc: string
+  imageTitle: string
+  imageAlt: string
+  iconSrc: string
+  iconAlt: string
+  iconTitle: string
+  introduceText: string
+  header: string
+  description: string
+  text: string
+  btnText: string
+  downloadLinks: {
+    id: string,
+    iconSrc: string,
+    iconTitle: string,
+    iconAlt: string,
+    href: string
+  }[]
+}
 
 function Mobile({
     imageSrc,
@@ -19,17 +40,17 @@ function Mobile({
     text,
     btnText,
     downloadLinks
-  }: any) {
+  }: IMobile) {
 
   return <div className={s.div}>
 
-    <IconTextWithHeader 
+    <Headline 
       iconSrc={iconSrc}
       iconAlt={iconAlt}
       iconTitle={iconTitle}
       introduceText={introduceText}
       header={header}
-      iconStyle="blue"
+      iconStyle="grey"
       headerStyle="blue"
     />
 
@@ -42,6 +63,7 @@ function Mobile({
     <Description 
       description={description}
       text={text}
+      textStyle="grey-dark"
     />
 
     <Button btnText={btnText} />

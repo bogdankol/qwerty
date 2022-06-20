@@ -1,13 +1,43 @@
-import { useState, useEffect } from 'react'
-
+import Container from '../global/Container/Container'
 import UseWidth from '../../tool/WindowWidthHandler'
 import Mobile from './Mobile'
 import NotMobile from './NotMobile'
 
 import s from './ImageAndText.module.sass'
-import Container from '../global/Container/Container'
 
-function ImageAndText({data}: any) {
+interface IDownloadLink {
+  id: string,
+  iconSrc: string,
+  iconTitle: string,
+  iconAlt: string,
+  href: string
+}
+
+interface IImageAndText {
+  data: {
+    icon: {
+      src:  string
+      title:  string
+      alt:  string 
+    }
+    introduceText:  string
+    header:  string
+    imageData: {
+      srcMobile:  string
+      srcTablet: string
+      srcDesktop:  string
+      title:  string
+      alt:  string
+    }
+    description:  string
+    text:  string
+    btnText:  string
+    downloadLinks: IDownloadLink[]
+  }
+}
+
+function ImageAndText({data}: IImageAndText) {
+
   const currentScreenWidth = UseWidth()
   const {
     icon,

@@ -1,6 +1,18 @@
 import s from './DownloadAppLinks.module.sass'
 
-function DownloadAppLinks({ downloadLinks }: any) {
+interface IDownloadLink {
+  id: string,
+  iconSrc: string,
+  iconTitle: string,
+  iconAlt: string,
+  href: string
+}
+
+interface IDownloadAppLinks {
+  downloadLinks: IDownloadLink[]
+}
+
+function DownloadAppLinks({ downloadLinks }: IDownloadAppLinks) {
   return <ul className={s.list}>
     {downloadLinks.map(({
         id,
@@ -8,12 +20,16 @@ function DownloadAppLinks({ downloadLinks }: any) {
         iconTitle,
         iconAlt,
         href
-    }: any) => {
+    }: IDownloadLink) => {
       return <li 
         key={id}
         className={s.item}
       >
-        <a href={href} target="_blank">
+        <a 
+          href={href} 
+          target="_blank"
+          rel="noreferrer"
+          >
           <img 
             className={s.image}
             src={iconSrc}
