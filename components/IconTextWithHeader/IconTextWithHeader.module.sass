@@ -34,6 +34,10 @@
     +r(992)
       font-size: 16px
 
+.blue 
+  composes: innerDiv
+  color: $blue-light2
+
 .img
   +r(0, 991)
     margin-right: 4px
@@ -42,6 +46,17 @@
     margin-right: 8px
     width: 18px
 
-.header
+.coloredHeader
   +r(576, 991)
     font-size: 32px
+
+.blueHeader
+  color: $blue-dark
+  letter-spacing: -0.9px
+  +r(0, 991)
+    font-size: 24px
+  +r(992)
+    margin-bottom: 28px
+
+.whiteHeader
+  color: $white

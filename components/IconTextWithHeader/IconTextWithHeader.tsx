@@ -5,11 +5,29 @@ function IconTextWithHeader({
     iconAlt,
     iconTitle,
     introduceText,
-    header
+    header,
+    iconStyle,
+    headerStyle
   }: any) {
+
+  function decideClassInnerDiv() {
+    if (iconStyle === 'grey') return s.innerDiv
+    if (iconStyle === 'blue') return s.blue
+
+    return s.innerDiv
+  }
+
+  function decideClassHeader() {
+    if (headerStyle === 'colored') return `${s.coloredHeader} gradient`
+    if (headerStyle === 'blue') return `${s.blueHeader}`
+    if (headerStyle === 'white') return `${s.whiteHeader}`
+
+    return `${s.coloredHeader} gradient`
+  }
+
   return <div className={s.wrapper}>
 
-    <div className={s.innerDiv}>
+    {iconSrc && <div className={decideClassInnerDiv()}>
       
       <img 
         src={iconSrc}
@@ -22,9 +40,9 @@ function IconTextWithHeader({
         {introduceText}
       </h4>
 
-    </div>
+    </div>}
 
-    <h2 className={`${s.header} gradient`}>
+    <h2 className={decideClassHeader()}>
       {header}
     </h2>
 

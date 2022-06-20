@@ -8,7 +8,6 @@ const Home: NextPage = () => {
   return <>
     <ImageAndText data={data} />
   </>
- /// create mutual branch from Dima and Me in Telco
  // don't forget to edit components to use through props
 }
 

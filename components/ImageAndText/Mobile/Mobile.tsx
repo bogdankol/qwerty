@@ -29,6 +29,8 @@ function Mobile({
       iconTitle={iconTitle}
       introduceText={introduceText}
       header={header}
+      iconStyle="blue"
+      headerStyle="blue"
     />
 
     <DivWithImage 
