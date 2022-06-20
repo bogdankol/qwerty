@@ -9,12 +9,19 @@ interface IDownloadLink {
 }
 
 interface IDownloadAppLinks {
-  downloadLinks: IDownloadLink[]
+  downloadLinksMobile?: IDownloadLink[]
+  downloadLinksDesktop?: IDownloadLink[]
 }
 
-function DownloadAppLinks({ downloadLinks }: IDownloadAppLinks) {
-  return <ul className={s.list}>
-    {downloadLinks.map(({
+function DownloadAppLinks({ 
+  downloadLinksMobile,
+  downloadLinksDesktop
+ }: IDownloadAppLinks) {
+
+  return <>
+  
+  {downloadLinksMobile && <ul className={s.list}>
+    {downloadLinksMobile.map(({
         id,
         iconSrc,
         iconTitle,
@@ -39,7 +46,23 @@ function DownloadAppLinks({ downloadLinks }: IDownloadAppLinks) {
         </a>
       </li>
     })}
-  </ul>
+  </ul>}
+
+ {downloadLinksDesktop && <select>
+    {downloadLinksDesktop.map(({
+      id,
+      iconSrc,
+      iconTitle,
+      iconAlt,
+      href
+    }: IDownloadLink) => {
+      return <option>
+        {id}
+      </option>
+    })}
+
+  </select>}
+  </>
 }
 
 export default DownloadAppLinks

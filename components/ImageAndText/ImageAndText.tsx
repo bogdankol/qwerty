@@ -32,7 +32,8 @@ interface IImageAndText {
     description:  string
     text:  string
     btnText:  string
-    downloadLinks: IDownloadLink[]
+    downloadLinksMobile: IDownloadLink[]
+    downloadLinksDesktop: IDownloadLink[]
   }
 }
 
@@ -47,7 +48,8 @@ function ImageAndText({data}: IImageAndText) {
     description,
     text,
     btnText,
-    downloadLinks
+    downloadLinksMobile,
+    downloadLinksDesktop
   } = data
   const {src: iconSrc, alt: iconAlt, title: iconTitle} = icon
   const {srcMobile, srcTablet, srcDesktop, title: imageTitle, alt: imageAlt} = imageData
@@ -69,7 +71,7 @@ function ImageAndText({data}: IImageAndText) {
           description={description}
           text={text}
           btnText={btnText}
-          downloadLinks={downloadLinks}
+          downloadLinksMobile={downloadLinksMobile}
         />
       }
 
@@ -86,7 +88,8 @@ function ImageAndText({data}: IImageAndText) {
           description={description}
           text={text}
           btnText={btnText}
-          downloadLinks={downloadLinks}
+          downloadLinksMobile={downloadLinksMobile}
+          downloadLinksDesktop={downloadLinksDesktop}
         />
       }
       

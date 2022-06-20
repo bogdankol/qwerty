@@ -18,7 +18,7 @@ interface IMobile {
   description: string
   text: string
   btnText: string
-  downloadLinks: {
+  downloadLinksMobile: {
     id: string,
     iconSrc: string,
     iconTitle: string,
@@ -39,7 +39,7 @@ function Mobile({
     description,
     text,
     btnText,
-    downloadLinks
+    downloadLinksMobile
   }: IMobile) {
 
   return <div className={s.div}>
@@ -51,7 +51,7 @@ function Mobile({
       introduceText={introduceText}
       header={header}
       iconStyle="grey"
-      headerStyle="blue"
+      headerStyle="colored"
     />
 
     <DivWithImage 
@@ -69,7 +69,7 @@ function Mobile({
     <Button btnText={btnText} />
 
     <DownloadAppLinks 
-      downloadLinks={downloadLinks}
+      downloadLinksMobile={downloadLinksMobile}
     />
 
   </div>

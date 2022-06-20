@@ -17,7 +17,7 @@
   "description": "Get Started with RingPlan™",
   "text": "Connect with your team and customers face-to-face with video conferencing.",
   "btnText": "Host Video Meetings",
-  "downloadLinks": [
+  "downloadLinksMobile": [
     {
       "id": "App Store",
       "iconSrc": "/images/pages/main-page/ImageAndText/app-store-icon.svg",
@@ -29,6 +29,29 @@
       "iconSrc": "/images/pages/main-page/ImageAndText/google-paly-icon.svg",
       "iconTitle": "Google Play",
       "iconAlt": "Google Play",
+      "href": "https://vyos.io"
+    }
+  ],
+  "downloadLinksDesktop": [
+    {
+      "id": "apple",
+      "iconSrc": "/images/pages/main-page/ImageAndText/apple.svg",
+      "iconTitle": "apple",
+      "iconAlt": "apple",
+      "href": "https://vyos.io"
+    },
+    {
+      "id": "windows",
+      "iconSrc": "/images/pages/main-page/ImageAndText/windows.svg",
+      "iconTitle": "windows",
+      "iconAlt": "windows",
+      "href": "https://vyos.io"
+    },
+    {
+      "id": "linux",
+      "iconSrc": "/images/pages/main-page/ImageAndText/linux.svg",
+      "iconTitle": "linux",
+      "iconAlt": "linux",
       "href": "https://vyos.io"
     }
   ]

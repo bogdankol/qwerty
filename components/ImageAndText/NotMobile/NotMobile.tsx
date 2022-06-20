@@ -3,8 +3,17 @@ import DivWithImage from "../DivWithImage"
 import Description from "../Description"
 import Button from '../../Button'
 import DownloadAppLinks from "../../DownloadAppLinks"
+import UseWidth from '../../../tool/WindowWidthHandler'
 
 import s from './NotMobile.module.sass'
+
+interface IDownloadLink {
+  id: string,
+  iconSrc: string,
+  iconTitle: string,
+  iconAlt: string,
+  href: string
+}
 
 interface INotMobile {
   imageSrc: string
@@ -18,13 +27,8 @@ interface INotMobile {
   description: string
   text: string
   btnText: string
-  downloadLinks: {
-    id: string,
-    iconSrc: string,
-    iconTitle: string,
-    iconAlt: string,
-    href: string
-  }[]
+  downloadLinksMobile: IDownloadLink[]
+  downloadLinksDesktop: IDownloadLink[]
 }
 
 function NotMobile({
@@ -39,8 +43,13 @@ function NotMobile({
     description,
     text,
     btnText,
-    downloadLinks
+    downloadLinksMobile,
+    downloadLinksDesktop
   }: INotMobile) {
+
+  const currentScreenWidth = UseWidth()
+
+
   return (
     <section className={s.section}>
 
@@ -61,8 +70,8 @@ function NotMobile({
             iconTitle={iconTitle}
             introduceText={introduceText}
             header={header}
-            iconStyle="blue"
-            headerStyle="blue"
+            iconStyle="grey"
+            headerStyle="colored"
           />
 
           <Description 
@@ -71,16 +80,21 @@ function NotMobile({
             textStyle="grey-dark"
           />
 
-          <Button btnText={btnText} />
+          <div style={{display: "flex"}}>
+
+            <Button btnText={btnText} />
+
+            <DownloadAppLinks downloadLinksDesktop={downloadLinksDesktop} />
+
+          </div>
+          
         </li>
 
       </ul>
 
-      <div>
-        <DownloadAppLinks 
-          downloadLinks={downloadLinks}
-        />
-      </div>
+      {currentScreenWidth < 1100 && <div>
+        <DownloadAppLinks downloadLinksMobile={downloadLinksMobile} />
+      </div>}
     
 
     </section>
